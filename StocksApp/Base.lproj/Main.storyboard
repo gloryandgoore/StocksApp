@@ -1,24 +1,234 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Ms-Tn-iAd">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--My Stocks-->
+        <scene sceneID="6bS-yk-4GI">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController id="6QL-7J-ACM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Stocks" selectedImage="chart.line.uptrend.xyaxis" catalog="system" id="bn0-Ox-kkQ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="t6n-fN-Q51">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4Kp-NY-FsP" kind="relationship" relationship="rootViewController" id="avY-OM-ILf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="37z-Vq-JQl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-3011" y="-377"/>
+        </scene>
+        <!--My Stocks-->
+        <scene sceneID="qbS-N8-9fP">
+            <objects>
+                <tableViewController id="4Kp-NY-FsP" customClass="MyStocksTableViewController" customModule="StocksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="xn3-N1-Lti">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="EOR-Lw-rVr">
+                                <rect key="frame" x="0.0" y="50" width="430" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EOR-Lw-rVr" id="PtH-ct-1Se">
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4Kp-NY-FsP" id="8td-HR-JYd"/>
+                            <outlet property="delegate" destination="4Kp-NY-FsP" id="dG7-Ey-Siv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Stocks" id="6c0-uK-ost">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="Q1F-y5-xR4"/>
+                            <barButtonItem systemItem="edit" id="u8z-Pz-cVK"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lsh-oC-TU8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3011" y="328"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="BMS-rL-vR7">
+            <objects>
+                <tableViewController id="8Ls-kB-CFJ" customClass="NewsTableViewController" customModule="StocksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="CJT-zR-2OC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell3" id="Nem-m5-Zrz">
+                                <rect key="frame" x="0.0" y="50" width="430" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nem-m5-Zrz" id="KNM-5u-reG">
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8Ls-kB-CFJ" id="yFd-Fy-XGB"/>
+                            <outlet property="delegate" destination="8Ls-kB-CFJ" id="kfY-4T-S8N"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="News" id="jMU-8w-gkv"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DIQ-CH-MTD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2217" y="328"/>
+        </scene>
+        <!--Movers-->
+        <scene sceneID="Ri2-1U-Q6s">
+            <objects>
+                <tableViewController id="zic-oQ-WNq" customClass="MoversTableViewController" customModule="StocksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="dzs-6e-A1v">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" id="5wo-Oz-JOD">
+                                <rect key="frame" x="0.0" y="50" width="430" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5wo-Oz-JOD" id="i9D-pt-8RQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zic-oQ-WNq" id="Kyl-2f-1sG"/>
+                            <outlet property="delegate" destination="zic-oQ-WNq" id="5dl-9u-QRI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Movers" id="U5f-5h-RZR"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OD6-ly-2CC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1458" y="358"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="81x-Ww-OZe">
+            <objects>
+                <navigationController id="F6f-wr-3Fc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="News" selectedImage="newspaper" catalog="system" id="qNk-Um-oEc"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vvm-MM-JxF">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8Ls-kB-CFJ" kind="relationship" relationship="rootViewController" id="Rls-mn-AHW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cTj-1T-dcV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2217" y="-377"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Irg-cP-oX2">
+            <objects>
+                <tabBarController id="3Ms-Tn-iAd" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1mC-04-ULQ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6QL-7J-ACM" kind="relationship" relationship="viewControllers" id="m7o-wH-rbD"/>
+                        <segue destination="F6f-wr-3Fc" kind="relationship" relationship="viewControllers" id="4gI-g0-g46"/>
+                        <segue destination="yIX-te-fTz" kind="relationship" relationship="viewControllers" id="9wk-fr-2wI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CBW-4F-gLa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2217" y="-1139"/>
+        </scene>
+        <!--Movers-->
+        <scene sceneID="uOT-cc-lUV">
+            <objects>
+                <navigationController id="yIX-te-fTz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Movers" selectedImage="arrow.up.arrow.down" catalog="system" id="7Eh-4q-lj8"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mjk-yH-T8Q">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zic-oQ-WNq" kind="relationship" relationship="rootViewController" id="kxE-6D-EaD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NKm-4A-KLF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1458" y="-377"/>
+        </scene>
+        <!--Search Table View Controller-->
+        <scene sceneID="x4Y-th-pkB">
+            <objects>
+                <tableViewController storyboardIdentifier="SearchTableViewController" id="dc1-6h-G03" customClass="SearchTableViewController" customModule="StocksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="809-RD-h9G">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <stackView key="tableFooterView" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" id="xhZ-BO-0Yd">
+                            <rect key="frame" x="0.0" y="121.66666793823242" width="430" height="46"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="tVG-hO-Hza">
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="10.666666666666666"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <segments>
+                                        <segment title="Active"/>
+                                        <segment title="Watching"/>
+                                    </segments>
+                                </segmentedControl>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcj-PC-WlM">
+                                    <rect key="frame" x="0.0" y="11.666666666666668" width="430" height="34.333333333333329"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Add"/>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="tVG-hO-Hza" firstAttribute="height" secondItem="Fcj-PC-WlM" secondAttribute="height" multiplier="0.281553" id="L5L-OJ-r5Z"/>
+                            </constraints>
+                        </stackView>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="bkd-Dy-ubQ">
+                                <rect key="frame" x="0.0" y="50" width="430" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bkd-Dy-ubQ" id="C25-1E-T0u">
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dc1-6h-G03" id="cNP-Bz-DYX"/>
+                            <outlet property="delegate" destination="dc1-6h-G03" id="tTd-rW-4GY"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jNB-E6-wxs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-650.23255813953483" y="-377.2532188841202"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.up.arrow.down" catalog="system" width="128" height="97"/>
+        <image name="chart.line.uptrend.xyaxis" catalog="system" width="128" height="102"/>
+        <image name="newspaper" catalog="system" width="128" height="111"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D5BE70B728FE894B00BFC350 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE70B628FE894B00BFC350 /* CoreDataStack.swift */; };
+		D5BE70BB28FE898900BFC350 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE70BA28FE898900BFC350 /* Model.swift */; };
+		D5BE70C128FE8A1B00BFC350 /* MyStocksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE70C028FE8A1B00BFC350 /* MyStocksTableViewController.swift */; };
+		D5BE70C328FE8A3400BFC350 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE70C228FE8A3400BFC350 /* NewsTableViewController.swift */; };
+		D5BE70C528FE8A4800BFC350 /* MoversTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE70C428FE8A4800BFC350 /* MoversTableViewController.swift */; };
+		D5BE70C728FEF18A00BFC350 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE70C628FEF18A00BFC350 /* SearchTableViewController.swift */; };
+		D5BE70C928FEFD9B00BFC350 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE70C828FEFD9B00BFC350 /* MyTableViewCell.swift */; };
 		D5CC5D3D28FE7BEC0038AA7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CC5D3C28FE7BEC0038AA7F /* AppDelegate.swift */; };
 		D5CC5D3F28FE7BEC0038AA7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CC5D3E28FE7BEC0038AA7F /* SceneDelegate.swift */; };
 		D5CC5D4128FE7BEC0038AA7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CC5D4028FE7BEC0038AA7F /* ViewController.swift */; };
@@ -17,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D5BE70B628FE894B00BFC350 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		D5BE70BA28FE898900BFC350 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D5BE70C028FE8A1B00BFC350 /* MyStocksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStocksTableViewController.swift; sourceTree = "<group>"; };
+		D5BE70C228FE8A3400BFC350 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		D5BE70C428FE8A4800BFC350 /* MoversTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoversTableViewController.swift; sourceTree = "<group>"; };
+		D5BE70C628FEF18A00BFC350 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		D5BE70C828FEFD9B00BFC350 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		D5CC5D3928FE7BEC0038AA7F /* StocksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StocksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5CC5D3C28FE7BEC0038AA7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5CC5D3E28FE7BEC0038AA7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +53,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D5BE70B428FE890600BFC350 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D5BE70C028FE8A1B00BFC350 /* MyStocksTableViewController.swift */,
+				D5BE70C228FE8A3400BFC350 /* NewsTableViewController.swift */,
+				D5BE70C428FE8A4800BFC350 /* MoversTableViewController.swift */,
+				D5BE70C628FEF18A00BFC350 /* SearchTableViewController.swift */,
+				D5BE70C828FEFD9B00BFC350 /* MyTableViewCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D5BE70B528FE891400BFC350 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D5BE70B628FE894B00BFC350 /* CoreDataStack.swift */,
+				D5CC5D4528FE7BEC0038AA7F /* StocksApp.xcdatamodeld */,
+				D5BE70BA28FE898900BFC350 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D5CC5D3028FE7BEC0038AA7F = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +94,8 @@
 		D5CC5D3B28FE7BEC0038AA7F /* StocksApp */ = {
 			isa = PBXGroup;
 			children = (
+				D5BE70B428FE890600BFC350 /* Controllers */,
+				D5BE70B528FE891400BFC350 /* Model */,
 				D5CC5D3C28FE7BEC0038AA7F /* AppDelegate.swift */,
 				D5CC5D3E28FE7BEC0038AA7F /* SceneDelegate.swift */,
 				D5CC5D4028FE7BEC0038AA7F /* ViewController.swift */,
@@ -65,7 +103,6 @@
 				D5CC5D4828FE7BEE0038AA7F /* Assets.xcassets */,
 				D5CC5D4A28FE7BEE0038AA7F /* LaunchScreen.storyboard */,
 				D5CC5D4D28FE7BEE0038AA7F /* Info.plist */,
-				D5CC5D4528FE7BEC0038AA7F /* StocksApp.xcdatamodeld */,
 			);
 			path = StocksApp;
 			sourceTree = "<group>";
@@ -141,9 +178,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5BE70BB28FE898900BFC350 /* Model.swift in Sources */,
+				D5BE70C128FE8A1B00BFC350 /* MyStocksTableViewController.swift in Sources */,
+				D5BE70B728FE894B00BFC350 /* CoreDataStack.swift in Sources */,
+				D5BE70C328FE8A3400BFC350 /* NewsTableViewController.swift in Sources */,
+				D5BE70C528FE8A4800BFC350 /* MoversTableViewController.swift in Sources */,
 				D5CC5D4128FE7BEC0038AA7F /* ViewController.swift in Sources */,
+				D5BE70C928FEFD9B00BFC350 /* MyTableViewCell.swift in Sources */,
 				D5CC5D3D28FE7BEC0038AA7F /* AppDelegate.swift in Sources */,
 				D5CC5D4728FE7BEC0038AA7F /* StocksApp.xcdatamodeld in Sources */,
+				D5BE70C728FEF18A00BFC350 /* SearchTableViewController.swift in Sources */,
 				D5CC5D3F28FE7BEC0038AA7F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
